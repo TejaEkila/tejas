@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tejas - Organize Your Life</title>
+    <style>
+        :root {
+            --primary-color: #4A90E2;
+            --text-color: #ffffff;
+            --bg-color: #000000;
+            --section-bg: #111111;
+            --error-color: #ef5350;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Hero Section (Split Layout) */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 80vh;
+            padding: 40px 0;
+            gap: 60px;
+            /* Swap visually: Image Left, Content Right */
+            flex-direction: row-reverse;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 75%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        p.lead {
+            font-size: 1.25rem;
+            color: #cccccc;
+            margin-bottom: 30px;
+        }
+
+        /* Privacy Policy Section */
+        .privacy-section {
+            background-color: var(--section-bg);
+            padding: 60px 40px;
+            margin-top: 40px;
+            border-top: 1px solid #333;
+        }
+
+        .privacy-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #ffffff;
+            border-bottom: 2px solid var(--primary-color);
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            margin-top: 30px;
+            color: #e0e0e0;
+        }
+
+        .privacy-text {
+            color: #aaaaaa;
+            margin-bottom: 15px;
+        }
+
+        .delete-account-box {
+            margin-top: 40px;
+            padding: 24px;
+            background-color: rgba(229, 57, 53, 0.1);
+            border: 1px solid rgba(229, 57, 53, 0.3);
+            border-radius: 12px;
+        }
+
+        .delete-title {
+            color: var(--error-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background-color: #000000;
+            color: #888;
+            margin-top: 60px;
+            border-top: 1px solid #333;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column-reverse;
+                /* Image top on mobile if we want or keeping content first? Usually content first on mobile is good, so column-reverse of row-reverse is... complicated. Let's stick to standard flow on mobile. */
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+
+            .hero-content {
+                padding-right: 0;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Tejas</h1>
+                <p class="lead">Your personal productivity companion.</p>
+                <p>
+                    We help you organize your place and get things done on time.
+                    We remove the stress of remembering by reminding you of important tasks exactly when needed.
+                </p>
+                <p>
+                    With <strong>goals</strong> to keep you focused, <strong>games</strong> to keep you motivated,
+                    and <strong>insights</strong> to track your growth, Tejas is designed to be your partner in personal
+                    productivity.
+                </p>
+            </div>
+            <div class="hero-image">
+                <img src="assets/image.png" alt="Tejas App Preview">
+            </div>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Section -->
+    <div class="privacy-section">
+        <div class="privacy-content">
+            <h2>Privacy Policy</h2>
+
+            <p class="privacy-text">
+                At Tejas, we take your privacy seriously. We want to be completely transparent about how we handle your
+                data.
+            </p>
+
+            <h3>Data Collection & Usage</h3>
+            <p class="privacy-text">
+                We do <strong>NOT</strong> share any of your personal information with third-party services.
+                Your data, including your goals, tasks, and habits, belongs solely to you.
+            </p>
+
+            <h3>Secure Cloud Storage</h3>
+            <p class="privacy-text">
+                Your data is securely stored in the cloud using secure cloud infrastructure.
+                This ensures your data is safe, backed up, and accessible across your devices, while remaining strictly
+                private.
+            </p>
+
+            <h3>Third-Party Services</h3>
+            <p class="privacy-text">
+                We do not sell, trade, or rent your personal identification information to others.
+                Our business model is built on providing value to you, not capitalizing on your data.
+            </p>
+
+            <div class="delete-account-box">
+                <span class="delete-title">Account Deletion</span>
+                <p class="privacy-text">
+                    If you wish to delete your account and all associated data, you may request deletion directly within
+                    the app.
+                </p>
+                <p class="privacy-text">
+                    <strong>Process:</strong> When you request deletion, we will proceed with permanently removing your
+                    data within <strong>48 hours</strong>.
+                    If you change your mind, simply sign in to Tejas again during this period to cancel the request.
+                </p>
+            </div>
+
+            <h3>Contact Us</h3>
+            <p class="privacy-text">
+                If you have any questions about our privacy practices, please contact us at <a
+                    href="mailto:entro8in@gmail.com">entro8in@gmail.com</a>.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Tejas. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
